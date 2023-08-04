@@ -1,0 +1,104 @@
+/* CSS Configuration */
+
+:root {
+  --main-bg-color: #FDD835;
+  --main-text-subtitle-color: #5C686D;
+  --main-text-paragraph-color: #717171;
+
+  --title-font-size: 3rem;
+  --subtitle-font-size: 2rem;
+  --paragraph-font-size: 1.1rem;
+
+}
+
+@font-face {
+  font-family: Roboto-Regular;
+  src: url(../libs/fonts/Roboto-Regular.ttf);
+}
+
+/* Media Queries */
+
+@media (max-width: 575.99px) {
+  .service-card-container{
+    margin-bottom: 1rem;
+  }
+
+  .our-story{
+    margin-top: 1.5rem;
+  }
+
+  .quote-request-form {
+    width: 100%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991.99px) { 
+  .quote-request-form {
+    width: 50%;
+  }
+}
+
+@media (min-width: 992px) { 
+
+  .service-card {
+    margin: 0 3.5rem;
+  }
+
+  .our-story-image {
+    width: 60%;
+  }
+
+  .quote-request-form {
+    width: 35%;
+  }
+
+}
+
+/* NavBar */
+
+nav {
+  background-color: var(--main-bg-color);
+}
+
+/* Body */
+
+body {
+  color-scheme: light dark;
+  font-family: Roboto-Regular;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: var(--title-font-size);
+}
+
+h3 {
+  color: var(--main-text-subtitle-color);
+  font-size: var(--subtitle-font-size);
+}
+
+p, q {
+  color: var(--main-text-paragraph-color);
+  font-size: var(--paragraph-font-size);
+}
+
+.main-title {
+  background-image: url("../assets/images/House.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 85vh;
+}
+
+.main-title::before {
+  opacity: 0.1;
+}
+
+.main-title h1, .main-title h3 {
+  color: white;
+}
+
+.btn-warning, .bg-custom {
+  background-color: var(--main-bg-color);
+}
