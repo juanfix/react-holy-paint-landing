@@ -57,11 +57,12 @@ export const dataOurReviews = {
     },
     {
       id: '0280be5a-ebb0-4265-82e4-d86403078c19',
-      author: 'Julie Motto',
+      author: 'Chassie Gamelin-Olson',
       img_url: '/assets/images/Home5.jpg',
-      description: "Nice work Shane it's beautiful work 👏",
-      createdAt: '2023-07-09T07:24:24.000Z',
-      updatedAt: '2023-07-09T07:24:24.000Z',
+      description:
+        'Shane Konell made our kitchen make over a fabulous experience 🙏🏼',
+      createdAt: '2020-05-18T07:24:24.000Z',
+      updatedAt: '2020-05-18T07:24:24.000Z',
     },
     {
       id: '0280be5a-ebb0-4265-82e4-d86403078c20',
