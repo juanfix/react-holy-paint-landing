@@ -29,5 +29,48 @@ export const dataOurReviews = {
       createdAt: '2023-07-25T07:24:24.000Z',
       updatedAt: '2023-07-25T07:24:24.000Z',
     },
+    {
+      id: '77a265b5-1903-44fd-bdc3-75ca6b6013d7',
+      author: 'Andy Holmio',
+      img_url: '/assets/images/Home3.jpg',
+      description:
+        'Thank you! Once again, you did awesome work! You will always be recommended by us.',
+      createdAt: '2023-08-06T07:24:24.000Z',
+      updatedAt: '2023-08-06T07:24:24.000Z',
+    },
+    {
+      id: '77a265b5-1903-44fd-bdc3-75ca6b6013d8',
+      author: 'Amber Williams',
+      img_url: '/assets/images/Home4.jpg',
+      description:
+        'We live by and watched the transformation of this job and you guys did a great job!',
+      createdAt: '2023-07-29T07:24:24.000Z',
+      updatedAt: '2023-07-29T07:24:24.000Z',
+    },
+    {
+      id: '77a265b5-1903-44fd-bdc3-75ca6b6013d9',
+      author: 'Lori Ann Payne',
+      img_url: '/assets/images/Cabinet2.jpg',
+      description: 'Beautiful work as usual! the color is stunning too.',
+      createdAt: '2023-07-10T07:24:24.000Z',
+      updatedAt: '2023-07-10T07:24:24.000Z',
+    },
+    {
+      id: '0280be5a-ebb0-4265-82e4-d86403078c19',
+      author: 'Julie Motto',
+      img_url: '/assets/images/Home5.jpg',
+      description: "Nice work Shane it's beautiful work 👏",
+      createdAt: '2023-07-09T07:24:24.000Z',
+      updatedAt: '2023-07-09T07:24:24.000Z',
+    },
+    {
+      id: '0280be5a-ebb0-4265-82e4-d86403078c20',
+      author: 'Bethany Faith',
+      img_url: '/assets/images/Home6.jpg',
+      description:
+        'Thank you so much Shane and Holy Paint for restoring my house to her original glory! 5 star rating ❤️❤️ She was in desperate need of staining to maintain the original cedar shake siding. I love it 💐',
+      createdAt: '2023-06-08T07:24:24.000Z',
+      updatedAt: '2023-06-08T07:24:24.000Z',
+    },
   ],
 };

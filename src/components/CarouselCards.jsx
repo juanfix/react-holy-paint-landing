@@ -10,13 +10,15 @@ export const CarouselCards = (props) => {
     <Carousel
       additionalTransfrom={0}
       arrows
-      autoPlaySpeed={3000}
+      autoPlay={true}
+      autoPlaySpeed={10000}
       centerMode={false}
       className=""
       containerClass="container-with-dots"
       dotListClass=""
       draggable
       focusOnSelect={false}
+      infinite={true}
       itemClass=""
       keyBoardControl
       minimumTouchDrag={80}
