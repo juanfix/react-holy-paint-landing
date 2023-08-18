@@ -2,14 +2,14 @@ export const OurStory = () => {
   return (
     <section className="mb-5">
       <div className="row mt-5">
-        <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex flex-direction-row align-items-center justify-content-center">
+        <div className="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 d-flex flex-direction-row align-items-center justify-content-center">
           <img
             src="/assets/images/MarieShane.jpeg"
             className="img-fluid rounded our-story-image"
             alt="Marie and Shane"
           />
         </div>
-        <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 our-story">
+        <div className="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 our-story">
           <div className="d-flex flex-column justify-content-center h-100">
             <h1>Our Story</h1>
             <p className="my-4">

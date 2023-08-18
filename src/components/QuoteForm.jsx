@@ -1,4 +1,12 @@
+import { useState } from 'react';
+import swAlert from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
+
 import { useForm } from '../hooks/useForm';
+import { LoadingSpinner } from './LoadingSpinner';
+import { useAxiosBlogs } from '../hooks/useAxiosMail';
+
+const MySwal = withReactContent(swAlert);
 
 const quoteFormFields = {
   name: '',
@@ -8,12 +16,37 @@ const quoteFormFields = {
 };
 
 export const QuoteForm = () => {
-  const { name, phone, email, message, onInputChange } =
+  const [isLoading, setIsLoading] = useState(false);
+  const { name, phone, email, message, onInputChange, onResetForm } =
     useForm(quoteFormFields);
 
-  const onRequestQuoteSubmit = (event) => {
+  const { startCreatingAndSendingMail } = useAxiosBlogs();
+
+  const onRequestQuoteSubmit = async (event) => {
+    setIsLoading(true);
     event.preventDefault();
-    console.log('hola');
+
+    const response = startCreatingAndSendingMail(name, phone, email, message);
+    response
+      .then((data) => {
+        console.log(data);
+        setIsLoading(false);
+        onResetForm();
+        MySwal.fire({
+          icon: 'success',
+          title: <p>Success</p>,
+          text: 'The message has been sent successfully, We will contact you as soon as we review your message.',
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+        setIsLoading(false);
+        MySwal.fire({
+          icon: 'error',
+          title: <p>Error</p>,
+          text: 'The message has not sent, try again.',
+        });
+      });
   };
 
   return (
@@ -31,6 +64,7 @@ export const QuoteForm = () => {
               autoComplete="off"
               value={name}
               onChange={onInputChange}
+              disabled={isLoading}
               required
             />
           </div>
@@ -43,6 +77,7 @@ export const QuoteForm = () => {
               autoComplete="off"
               value={phone}
               onChange={onInputChange}
+              disabled={isLoading}
               required
             />
           </div>
@@ -55,6 +90,7 @@ export const QuoteForm = () => {
               autoComplete="off"
               value={email}
               onChange={onInputChange}
+              disabled={isLoading}
               required
             />
           </div>
@@ -67,13 +103,18 @@ export const QuoteForm = () => {
               name="message"
               value={message}
               onChange={onInputChange}
+              disabled={isLoading}
               required
             ></textarea>
           </div>
           <div className="text-center">
-            <button type="submit" className="btn btn-light">
-              Submit
-            </button>
+            {isLoading ? (
+              <LoadingSpinner />
+            ) : (
+              <button type="submit" className="btn btn-lg btn-light mb-3">
+                Submit
+              </button>
+            )}
           </div>
         </form>
       </div>
