@@ -1,8 +1,19 @@
-# React + Vite
+# Holy Paint - Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project was developed with React JS 18.2.0. It's a landing page about Holy Paint company for Modern Education. It has a contact form to send an email with some information to the company.
 
-Currently, two official plugins are available:
+It uses [Mailgun server](https://github.com/juanfix/node-mailgun-backend)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## See a Demo
+
+You can view how this project is without download it on [Vercel](https://react-holy-paint-landing.vercel.app/)
+
+## Development server
+
+1. Clone the repository.
+2. Run `yarn` to install dependencies.
+3. Rename the .env.template file to .env
+4. Assign environment variables in the .env file.
+5. Run `yarn dev` to init a dev server.
+6. Navigate to `http://localhost:5173/`.
+7. The appication will automatically reload if you change any of the source files.

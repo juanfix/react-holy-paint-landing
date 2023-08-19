@@ -29,7 +29,7 @@ export const QuoteForm = () => {
     const response = startCreatingAndSendingMail(name, phone, email, message);
     response
       .then((data) => {
-        console.log(data);
+        console.log({ data });
         setIsLoading(false);
         onResetForm();
         MySwal.fire({
@@ -44,7 +44,7 @@ export const QuoteForm = () => {
         MySwal.fire({
           icon: 'error',
           title: <p>Error</p>,
-          text: 'The message has not sent, try again.',
+          text: 'The message has not sent, try again later.',
         });
       });
   };
