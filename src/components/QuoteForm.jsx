@@ -29,14 +29,21 @@ export const QuoteForm = () => {
     const response = startCreatingAndSendingMail(name, phone, email, message);
     response
       .then((data) => {
-        console.log({ data });
         setIsLoading(false);
-        onResetForm();
-        MySwal.fire({
-          icon: 'success',
-          title: <p>Success</p>,
-          text: 'The message has been sent successfully, We will contact you as soon as we review your message.',
-        });
+        if (typeof data === 'undefined') {
+          MySwal.fire({
+            icon: 'error',
+            title: <p>Error</p>,
+            text: 'The message has not sent, try again later.',
+          });
+        } else {
+          onResetForm();
+          MySwal.fire({
+            icon: 'success',
+            title: <p>Success</p>,
+            text: 'The message has been sent successfully, We will contact you as soon as we review your message.',
+          });
+        }
       })
       .catch((err) => {
         console.log(err);

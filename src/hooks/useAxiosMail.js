@@ -1,8 +1,3 @@
-import swAlert from 'sweetalert2';
-import withReactContent from 'sweetalert2-react-content';
-
-const MySwal = withReactContent(swAlert);
-
 import holyPaintApi from '../api/holyPaintApi';
 
 export const useAxiosBlogs = () => {
@@ -17,12 +12,6 @@ export const useAxiosBlogs = () => {
       return data;
     } catch (error) {
       console.log(error);
-      //Swal.fire('Error sending the mail.', error.response.data.msg, 'error');
-      MySwal.fire({
-        icon: 'error',
-        title: 'Error sending the mail.',
-        text: error.response.data.msg,
-      });
     }
   };
 
