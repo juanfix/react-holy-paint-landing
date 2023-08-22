@@ -34,7 +34,7 @@ export const QuoteForm = () => {
           MySwal.fire({
             icon: 'error',
             title: <p>Error</p>,
-            text: 'The message has not sent, try again later.',
+            text: 'The message has not been sent, try again later.',
           });
         } else {
           onResetForm();
@@ -51,7 +51,7 @@ export const QuoteForm = () => {
         MySwal.fire({
           icon: 'error',
           title: <p>Error</p>,
-          text: 'The message has not sent, try again later.',
+          text: 'The message has not been sent, try again later.',
         });
       });
   };
